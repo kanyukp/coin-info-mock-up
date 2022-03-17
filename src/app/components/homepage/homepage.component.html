@@ -1,0 +1,22 @@
+<table class="table table-striped" *ngIf="allTheCoins!=null">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col" (click)="sortByName()" >Coin</th>
+      <th scope="col" (click)="sortByPrice()">Price</th>
+      <th scope="col" (click)="sortByPercentChange()">24hr Change</th>
+      <th scope="col" (click)="sortByVolume()">24hr Volume</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let coin of allTheCoins.results;  index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>
+        <p class="card-text coin-name">{{coin.T}} </p>
+      </td>
+      <td><p class="card-text coin-info"><span class="text-success">$</span> {{coin.c}}</p></td>
+      <td><p class="card-text" [ngStyle]="{'color' : coin.percentChange>0 ? 'green' : 'red'}">{{coin.percentChange | number : '.2-2'}}%</p></td>
+      <td><p class="card-text coin-info">{{coin.h}}</p></td>
+    </tr>
+    </tbody>
+</table>

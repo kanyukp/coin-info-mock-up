@@ -1,0 +1,26 @@
+<form [formGroup]="comparisonForm" (ngSubmit)="onSubmit()" >
+
+    <hr>
+
+    <mat-form-field style="float:left;width: 33.3333%;">
+        <input matInput id="ticker1" placeholder="Coin1" type="text" formControlName="ticker1" required>
+        <mat-error *ngIf="ticker1.invalid && ticker1.touched">
+            That is not a valid coin
+        </mat-error>
+    </mat-form-field>
+    <div style="float:left; width: 33.3333%; text-align: center;">
+    <button mat-raised-button type="submit" [disabled]="!comparisonForm.valid">Compare!</button>
+    </div>
+    <mat-form-field style="float:right;width: 33.3333%;">
+        <input matInput id="ticker2"  placeholder="Coin2"  type="text" formControlName="ticker2" required>
+        <mat-error *ngIf="ticker2.invalid && ticker2.touched">
+            That is not a valid coin
+        </mat-error>
+   </mat-form-field>
+
+   <div style="clear:both;"></div>
+   <hr>
+
+
+   
+  </form>

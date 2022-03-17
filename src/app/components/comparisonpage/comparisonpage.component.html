@@ -1,0 +1,23 @@
+<app-comparison-form-group (comparisonEvent)="receiveCoins($event)"></app-comparison-form-group>
+<div *ngIf="coins.length == 2">
+<div class="card flex-row align-items-center pl-3 mb-2 coin-card" *ngFor="let coin of coins;let i = index">
+    <div class="card-body row pb-1">
+        <h4 class="coin-name">{{coin.symbol}}</h4>
+        <p class="coin-info ml-2"> <span class="text-success">$</span> {{coin.close}}</p>
+    </div>
+    <ngx-charts-line-chart
+      [view]="view"
+      [scheme]="colorScheme"
+      [xAxis]="xAxis"
+      [yAxis]="yAxis"
+      [timeline]="timeline"
+      [results]="[results[i]]"
+      (select)="onSelect($event)"
+      (activate)="onActivate($event)"
+      (deactivate)="onDeactivate($event)"
+      >
+    </ngx-charts-line-chart> 
+</div>
+
+
+</div>

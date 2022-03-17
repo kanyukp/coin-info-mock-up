@@ -1,0 +1,14 @@
+.coin-card {
+    border: none;
+}
+
+.coin-name {
+    font-weight: bold;
+    font-size: larger;
+    color: #720808;
+}
+
+.coin-info {
+    color: #813e3e;
+    font-weight: bold;
+}
