@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
-import { CoinService } from 'src/app/services/coin.service';
-import {Coin} from "src/app/models/coin.model"
+import { CoinService } from '../services/coin.service';
+import {Coin} from "../models/coin.model"
 import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({

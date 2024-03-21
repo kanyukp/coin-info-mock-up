@@ -1,13 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CoinService } from 'src/app/services/coin.service';
-import {Coin} from "src/app/models/coin.model";
+import { CoinService } from '../../services/coin.service';
+import {Coin} from "../../models/coin.model";
 
 @Component({
   selector: 'app-comparisonpage',
   templateUrl: './comparisonpage.component.html',
   styleUrls: ['./comparisonpage.component.css']
 })
-
 export class ComparisonpageComponent implements OnInit {
 
   public coin: Coin;

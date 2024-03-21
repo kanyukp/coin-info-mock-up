@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { multi } from '../../data';
-import {Coin} from "src/app/models/coin.model"
-import { Coin2 } from 'src/app/models/coin2.model';
-import { CoinService } from 'src/app/services/coin.service';
+import {Coin} from "../../models/coin.model"
+import { Coin2 } from '../../models/coin2.model';
+import { CoinService } from '../../services/coin.service';
 import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
